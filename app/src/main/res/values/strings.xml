@@ -1,0 +1,15 @@
+<resources>
+    <string name="app_name">LapitChat</string>
+    <string name="log_out">Log out</string>
+    <string name="all_users">All users</string>
+    <string name="account_settings">Account settings</string>
+    <string name="create_a_new_account">Create a new account</string>
+    <string name="login_to_your_account">Login to your account</string>
+    <string name="display_name">Display Name</string>
+    <string name="create_account">CREATE ACCOUNT</string>
+    <string name="welcome">Welcome to Lapit Chat App</string>
+    <string name="already_have_account">ALREADY HAVE ACCOUNT</string>
+    <string name="need_a_new_account">NEED A NEW ACCOUNT ?</string>
+    <string name="default_status">Hi ther!</string>
+
+</resources>
