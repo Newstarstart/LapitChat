@@ -32,8 +32,6 @@ public class DetailsMessageActivity extends AppCompatActivity {
     private Users mReceiver;
     private Messages mMessage;
 
-
-
     private CircleImageView details_message_receiver_image;
     private TextView details_message_receiver_name;
     private TextView details_message_receiver_status;
@@ -74,6 +72,8 @@ public class DetailsMessageActivity extends AppCompatActivity {
         details_message_subject_tv = (TextView) findViewById(R.id.details_message_subject_tv);
         details_message_body_tv = (TextView) findViewById(R.id.details_message_body_tv);
         details_message_date_tv = (TextView) findViewById(R.id.details_message_date_tv);
+
+        mMessagesDatabase.child(mSenderId).child(mMessageId).child("seen").setValue("yes");
 
         mMessagesDatabase.child(mSenderId).child(mMessageId).addValueEventListener(new ValueEventListener() {
             @Override

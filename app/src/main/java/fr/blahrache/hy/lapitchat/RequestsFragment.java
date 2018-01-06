@@ -166,7 +166,11 @@ public class RequestsFragment extends Fragment {
                                         startActivity(detailsAppointmentIntent);
                                         break;
                                     case 1:
-                                        Toast.makeText(getContext(), "Place", Toast.LENGTH_LONG).show();
+                                        //Toast.makeText(getContext(), "Place", Toast.LENGTH_LONG).show();
+                                        Intent placeAppointmentIntent = new Intent(getContext(), PlaceActivity.class);
+                                        placeAppointmentIntent.putExtra("address", appointment.getAddress());
+                                        placeAppointmentIntent.putExtra("otherUser", appointment.getType());
+                                        startActivity(placeAppointmentIntent);
                                         break;
                                     case 2:
                                         //Toast.makeText(getContext(), "Mark as seen", Toast.LENGTH_LONG).show();

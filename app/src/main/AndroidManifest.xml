@@ -55,6 +55,7 @@
         <activity
             android:name=".DetailsMessageActivity"
             android:parentActivityName=".MainActivity" />
+        <activity android:name=".PlaceActivity"></activity>
     </application>
 
 </manifest>

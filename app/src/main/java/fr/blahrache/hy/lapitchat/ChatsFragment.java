@@ -33,7 +33,7 @@ import de.hdodenhof.circleimageview.CircleImageView;
  */
 public class ChatsFragment extends Fragment {
 
-    private RecyclerView mAppointmentsList;
+    private RecyclerView mChatsList;
 
     private FirebaseAuth mAuth;
     private DatabaseReference mUsersDatabase;
@@ -54,15 +54,15 @@ public class ChatsFragment extends Fragment {
 
         mMainView = inflater.inflate(R.layout.fragment_chats, container, false);
 
-        mAppointmentsList = (RecyclerView) mMainView.findViewById(R.id.chat_requests_list);
+        mChatsList = (RecyclerView) mMainView.findViewById(R.id.chat_requests_list);
 
         mAuth = FirebaseAuth.getInstance();
         mCurrentUserId = mAuth.getCurrentUser().getUid();
         mUsersDatabase = FirebaseDatabase.getInstance().getReference().child("Users");
         mMessagesDatabase = FirebaseDatabase.getInstance().getReference().child("Messages").child(mCurrentUserId);
 
-        mAppointmentsList.setHasFixedSize(true);
-        mAppointmentsList.setLayoutManager(new LinearLayoutManager(getContext()));
+        mChatsList.setHasFixedSize(true);
+        mChatsList.setLayoutManager(new LinearLayoutManager(getContext()));
 
         return mMainView;
     }
@@ -193,7 +193,7 @@ public class ChatsFragment extends Fragment {
 
             }
         };
-        mAppointmentsList.setAdapter(messagesRecyclerViewAdapter);
+        mChatsList.setAdapter(messagesRecyclerViewAdapter);
     }
 
     public static class MessagesViewHolder extends RecyclerView.ViewHolder{
