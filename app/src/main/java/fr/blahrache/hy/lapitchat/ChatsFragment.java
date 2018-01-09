@@ -148,7 +148,7 @@ public class ChatsFragment extends Fragment {
                                 "Details",
                                 "Mark as seen",
                                 "Mark as not Seen",
-                                "Send message",
+                                "Respond",
                                 "Open profile"
                         };
                         AlertDialog.Builder builder = new AlertDialog.Builder(getContext());
